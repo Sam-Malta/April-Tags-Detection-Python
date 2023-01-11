@@ -88,8 +88,8 @@ def solvePnP(imagePoints):
         [0, 0, 0],
     ], dtype=np.float32)
 
-    cameraMatrix = np.array([[1449.9683464206787, 0.0, 1003.0203454587667], [0.0, 1461.9848274503418, 580.2986291991225], [0.0, 0.0, 1.0]])
-    distCoeffs = np.array([[0.15263409503839162, -0.33564390239071834, 0.002800534780621006, 0.0034135588910573947, 0.19448728534446]])
+    cameraMatrix = np.array([[1165.0804701289262, 0.0, 627.0212940283434], [0.0, 1163.558769757253, 316.3709366006025], [0.0, 0.0, 1.0]])
+    distCoeffs = np.array([[0.18586165886503364, -0.8772195344287632, -0.013994811668479672, -0.0077445107713434306, 0.3513116605396649]])
     retval, rvec, tvec = cv.solvePnP(objectPoints, imagePoints, cameraMatrix, distCoeffs, flags=cv.SOLVEPNP_IPPE_SQUARE)
     return rvec, tvec
 
@@ -170,8 +170,8 @@ def draw_tags(
 
         #Give Corners to PNP Solver
         rvex, tvex = solvePnP(corners)
-        #print(tvex[0], tvex[1], tvex[2], sep=',')
-        print(f'X: {rvex[0]} Y: {rvex[1]} Z: {rvex[2]}')
+        #print(f'X: {rvex[0]} Y: {rvex[1]} Z: {rvex[2]}')
+        print(f'X: {tvex[0]} Y: {tvex[1]} Z: {tvex[2]}')
 
         center = (int(center[0]), int(center[1]))
         corner_01 = (int(corners[0][0]), int(corners[0][1]))

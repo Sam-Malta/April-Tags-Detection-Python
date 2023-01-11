@@ -10,7 +10,7 @@ import glob
 from pathlib import Path
 CHESSBOARD_CORNER_NUM_X = 9
 CHESSBOARD_CORNER_NUM_Y = 6
-IMAGE_SRC = "CameraCalibration"
+IMAGE_SRC = "Calibration2"
 
 # root directory of repo for relative path specification.
 root = Path(__file__).parent.absolute()
