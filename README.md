@@ -1,2 +1,2 @@
 # April-TagsDetectionPy
- Proof of Concept Detection in Python
+Test of April Tag Detection in Python
